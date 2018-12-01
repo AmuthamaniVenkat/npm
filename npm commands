@@ -1,0 +1,89 @@
+NPM:
+   Node Package Manager npm provides following two main functionalities:
+Online repositories for node.js packages/modules which are searchable on search.nodejs.org
+Command line utility to install Node.js packages, do version management and dependency
+management of Node.js packages.
+
+npm install npm -g
+npm version
+npm help
+
+Installing Modules using npm:
+npm install <Module Name>
+
+npm install -g @angular/cli
+npm install express
+
+Global vs Local installation:
+  By default, npm installs any dependency in the local mode. Here local mode refers to the package
+installation in node_modules directory lying in the folder where Node application is present.
+Locally deployed packages are accessible via require method. For example when we installed
+express module, it created node_modules directory in the current directory where it installed
+express module.
+
+ npm install express -g
+
+Using package.json:
+  package.json is present in the root directory of any Node application/module and is used to define
+the properties of a package.
+
+Attributes of Package.json:
+
+name - name of the package
+version - version of the package
+description - description of the package
+homepage - homepage of the package
+author - author of the package
+contributors - name of the contributors to the package
+dependencies - list of dependencies. npm automatically installs all the dependencies
+mentioned here in the node_module folder of the package.
+repository - repository type and url of the package
+main - entry point of the package
+keywords - keywords
+
+Uninstalling a module:
+npm uninstall express
+List:
+npm ls
+Update:
+npm update express
+Search:
+npm search express
+
+Create a module:
+  Creation of module requires package.json to be generated. Let's generate package.json using
+npm, which will generate basic skeleton of the package.json.
+
+npm init
+This utility will walk you through creating a package.json file.
+
+It only covers the most common items, and tries to guess sane defaults.
+See 'npm help json' for definitive documentation on these fields
+and exactly what they do.
+Use 'npm install <pkg> --save' afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (webmaster)
+You will need to provide all the required information about your module. YOu can take help from
+the above mentioned package.json file to understand the meanings of various information
+demanded. Once package.json is generated. Use the following command to register yourself with
+npm repository site using a valid email address.
+$ npm adduser
+Username: mcmohd
+Password:
+Email: (this IS public) mcmohd@gmail.com
+Now its time to publish your module:
+$ npm publish
+If everything is fine with your module, then it will be published in the reporsitory and will be
+accessible to install using npm like any other other Node.js module.
+
+
+
+
+
+
+
+reference link:https://www.tutorialspoint.com/nodejs/pdf/nodejs_npm.pdf
+
+
